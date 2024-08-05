@@ -11,7 +11,6 @@ import appointmetRouter from "./router/appointmentRouter.js"
 
 const app = express();
 config({ path: "./config/config.env" })
-const userRouter
 app.use(
     cors({
         origin: [process.env.FORNTEND_URL, process.env.DASHBOARD_URL],
