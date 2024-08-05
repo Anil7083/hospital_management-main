@@ -21,7 +21,7 @@ const AddNewAdmin = () => {
     const handleAddNewAdmin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("https://hospital-management-ivory.vercel.app/api/v1/user/admin/addnew",
+            const response = await axios.post("https://hospital-management-main-1xbz.onrender.com/api/v1/user/admin/addnew",
                 { firstName, lastName, email, phone, nic, dob, gender, password },
                 {
                     withCredentials: true,

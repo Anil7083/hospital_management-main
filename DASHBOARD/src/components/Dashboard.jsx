@@ -14,7 +14,7 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchAppointments = async () => {
             try {
-                const { data } = await axios.get("https://hospital-management-ivory.vercel.app/api/v1/appointment/getall", { withCredentials: true });
+                const { data } = await axios.get("https://hospital-management-main-1xbz.onrender.com/api/v1/appointment/getall", { withCredentials: true });
                 setAppointments(data.appointment);
             } catch (error) {
                 setAppointments({});
@@ -26,7 +26,7 @@ const Dashboard = () => {
 
     const handleUpdateStatus = async (appointmentId, statu) => {
         try {
-            const { data } = await axios.put(`https://hospital-management-ivory.vercel.app/api/v1/appointment/update/${appointmentId}`, { statu }, { withCredentials: true });
+            const { data } = await axios.put(`https://hospital-management-main-1xbz.onrender.com/api/v1/appointment/update/${appointmentId}`, { statu }, { withCredentials: true });
             setAppointments((prevAppointments) => prevAppointments.map((appointment) => appointment._id === appointmentId ? { ...appointment, statu } : appointment ) );
             toast.success(data.message);
         } catch (error) {

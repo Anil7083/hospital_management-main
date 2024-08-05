@@ -13,7 +13,7 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("https://hospital-management-ivory.vercel.app/api/v1/user/login",
+            const response = await axios.post("https://hospital-management-main-1xbz.onrender.com/api/v1/user/login",
                 { email, password, confirmPassword, role: "Admin" },
                 {
                     withCredentials: true,

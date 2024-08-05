@@ -10,7 +10,7 @@ const Message = () => {
     useEffect(() => {
         const fetchMessages = async () => {
             try {
-                const { data } = await axios.get("https://hospital-management-ivory.vercel.app/api/v1/message/getAll", {
+                const { data } = await axios.get("https://hospital-management-main-1xbz.onrender.com/api/v1/message/getAll", {
                     withCredentials: true,
                 });
                 setMessages(data.messages);

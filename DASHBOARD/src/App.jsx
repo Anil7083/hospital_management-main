@@ -19,7 +19,7 @@ const App = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get("https://hospital-management-ivory.vercel.app/api/v1/user/admin/me", {
+        const response = await axios.get("https://hospital-management-main-1xbz.onrender.com/api/v1/user/admin/me", {
           withCredentials: true
         });
         setIsAuthenticated(true);

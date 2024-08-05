@@ -11,7 +11,7 @@ const Doctors =()=>{
     useEffect(()=>{
         const fetchDoctors=async()=>{
             try {
-            const {data} =await axios.get("https://hospital-management-ivory.vercel.app/api/v1/user/doctors",{
+            const {data} =await axios.get("https://hospital-management-main-1xbz.onrender.com/api/v1/user/doctors",{
                 withCredentials:true
             });
             setDoctors(data.doctors);

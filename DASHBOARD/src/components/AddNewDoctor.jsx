@@ -61,7 +61,7 @@ const AddNewDoctor = () => {
             formData.append("dob", dob);
 
 
-            const response = await axios.post("https://hospital-management-ivory.vercel.app/api/v1/user/doctor/addnew",
+            const response = await axios.post("https://hospital-management-main-1xbz.onrender.com/api/v1/user/doctor/addnew",
                 formData,
                 {
                     withCredentials: true,
