@@ -76,8 +76,8 @@ const Dashboard = () => {
                         </thead>
                         <tbody>
                             {
-                                appointment && appointment.length > 0 ? (
-                                    appointment.map(appointment => {
+                                appointments && appointments.length > 0 ? (
+                                    appointments.map(appointment => {
                                         return (
                                             <tr key={appointment}>
                                                 <td>{`${appointment.firstName} ${appointment.lastName}`}</td>
