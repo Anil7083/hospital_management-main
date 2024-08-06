@@ -42,7 +42,7 @@ const appointmentSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    dapartment: {
+    department: {
         type: String,
         required: true,
     },
