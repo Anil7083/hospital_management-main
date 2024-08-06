@@ -39,7 +39,7 @@ const Navbar = () => {
                 {isAuthenticated ? (
                     <button className="logoutBtn btn" onClick={handleLogout}>LOGOUT</button>
                 ) : (
-                    <button className="logoutBtn btn" onClick={gotoLogin}>LOGIN</button>
+                    <button className="loginBtn btn" onClick={gotoLogin}>LOGIN</button>
                 )}
             </div>
             <div className="hamburger" onClick={()=>setShow(!show)}>
