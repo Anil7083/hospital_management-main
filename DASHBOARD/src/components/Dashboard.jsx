@@ -85,7 +85,7 @@ const Dashboard = () => {
                                                 <td>{`${appointment.doctor.firstName} ${appointment.doctor.lastName}`}</td>
                                                 <td>{appointment.department}</td>
                                                 <td>
-                                                    <select className={appointment.status === "Pending" ? "value-pending" : appointment.status === "Rejected" ? "value-rejected" : "value-accepted"} value={appointment.status} onChange={(e) => handleUpdateStatus(appointment.id, e.target.value)}>
+                                                    <select className={appointment.status === "Pending" ? "value-pending" : appointment.status === "Rejected" ? "value-rejected" : "value-accepted"} value={appointment.status} onChange={(e) => handleUpdateStatus(appointment._id, e.target.value)}>
                                                         <option value="Pending" className="value-pending">Pending</option>
                                                         <option value="Accepted" className="value-accepted">Accepted</option>
                                                         <option value="Rejected" className="value-rejected">Rejected</option>
