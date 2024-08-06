@@ -57,7 +57,7 @@ const AppointmentForm = () => {
                 nic,
                 dob,
                 gender,
-                appointment_data: appointmentDate,
+                appointment_date: appointmentDate,
                 department,
                 doctor_firstName: doctorFirstName,
                 doctor_lastName: doctorLastName,
