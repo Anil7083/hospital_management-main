@@ -9,13 +9,13 @@ import { toast } from "react-toastify";
 const Dashboard = () => {
     const { isAuthenticated, user } = useContext(Context);
 
-    const [appointment, setAppointments] = useState([]);
+    const [appointments, setAppointments] = useState([]);
 
     useEffect(() => {
         const fetchAppointments = async () => {
             try {
                 const { data } = await axios.get("https://hospital-management-main-1xbz.onrender.com/api/v1/appointment/getall", { withCredentials: true });
-                setAppointments(data.appointment);
+                setAppointments(data.appointments);
             } catch (error) {
                 setAppointments({});
                 console.log("some error occured while fethching Appointments", error);
@@ -24,10 +24,10 @@ const Dashboard = () => {
         fetchAppointments();
     }, []);
 
-    const handleUpdateStatus = async (appointmentId, statu) => {
+    const handleUpdateStatus = async (appointmentId, status) => {
         try {
-            const { data } = await axios.put(`https://hospital-management-main-1xbz.onrender.com/api/v1/appointment/update/${appointmentId}`, { statu }, { withCredentials: true });
-            setAppointments((prevAppointments) => prevAppointments.map((appointment) => appointment._id === appointmentId ? { ...appointment, statu } : appointment ) );
+            const { data } = await axios.put(`https://hospital-management-main-1xbz.onrender.com/api/v1/appointment/update/${appointmentId}`, { status }, { withCredentials: true });
+            setAppointments((prevAppointments) => prevAppointments.map((appointment) => appointment._id === appointmentId ? { ...appointment, status } : appointment ) );
             toast.success(data.message);
         } catch (error) {
             toast.error(error.response.data.message)
