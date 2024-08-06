@@ -65,7 +65,7 @@ const AppointmentForm = () => {
                 hasVisited: hasVisitedBool,
             }, {
                 withCredentials: true,
-                headers: { "Content-Type": "appliction/json", },
+                headers: { "Content-Type": "application/json", },
             });
             toast.success(data.message);
             navigateTo("/");
