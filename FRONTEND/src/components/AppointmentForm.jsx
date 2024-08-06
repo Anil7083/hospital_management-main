@@ -112,7 +112,7 @@ const AppointmentForm = () => {
                         <input type="date" placeholder="Appointment Date" value={appointmentDate} onChange={(e) => setAppointmentDate(e.target.value)} />
                     </div>
                     <div>
-                        <select value={department} onChange={(e) => { setDepartment(e.target.value); setDoctorFristName(""); setDoctorLastName(""); }}>
+                        <select value={department} onChange={(e) => { setDepartment(e.target.value); setDoctorFirstName(""); setDoctorLastName(""); }}>
                             {departmentArray.map((depart, index) => {
                                 return (<option value={depart} key={index}>
                                     {depart}
@@ -121,7 +121,7 @@ const AppointmentForm = () => {
                         </select>
                         <select value={`${doctorFirstName} ${doctorLastName}`} onChange={(e) => {
                             const [firstName, lastName] = e.target.value.split(" ");
-                            setDoctorFristName(firstName);
+                            setDoctorFirstName(firstName);
                             setDoctorLastName(lastName);
                         }}
                             disabled={!department}
