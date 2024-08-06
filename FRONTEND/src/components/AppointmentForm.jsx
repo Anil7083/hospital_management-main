@@ -13,7 +13,7 @@ const AppointmentForm = () => {
     const [gender, setGender] = useState("");
     const [appointmentDate, setAppointmentDate] = useState("");
     const [department, setDepartment] = useState("");
-    const [doctorFirstName, setDoctorFristName] = useState("");
+    const [doctorFirstName, setDoctorFirstName] = useState("");
     const [doctorLastName, setDoctorLastName] = useState("");
     const [address, setAddress] = useState("");
     const [hasVisited, setHasVisited] = useState("");
@@ -69,6 +69,19 @@ const AppointmentForm = () => {
             });
             toast.success(data.message);
             navigateTo("/");
+            setFirstName(""),
+                setLastName(""),
+                setEmail(""),
+                setPhone(""),
+                setNic(""),
+                setDob(""),
+                setGender(""),
+                setAppointmentDate(""),
+                setDepartment(""),
+                setDoctorFirstName(""),
+                setDoctorLastName(""),
+                setHasVisited(""),
+                setAddress("");
         } catch (error) {
             toast.error(error.response.data.message);
         }
