@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../main";
 import axios from "axios";
 import { Navigate } from "react-router-dom";
 
 const Message = () => {
     const [messages, setMessages] = useState([]);
-    const { isAuthenticated } = useState(Context);
+    const { isAuthenticated } = useContext(Context);
 
     useEffect(() => {
         const fetchMessages = async () => {
