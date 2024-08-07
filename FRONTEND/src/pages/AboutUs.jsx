@@ -5,8 +5,8 @@ import Biography from "../components/Biography"
 const AboutUs = () => {
     return (
         <>
-        <Hero title={"Learn More About Us | ZeeCare Medical Institute"} imageUrl={"/public/about.png"}/>
-        <Biography imageUrl={"/public/whoweare.png"}/>
+        <Hero title={"Learn More About Us | ZeeCare Medical Institute"} imageUrl={"/about.png"}/>
+        <Biography imageUrl={"/whoweare.png"}/>
 
         </>
     )
