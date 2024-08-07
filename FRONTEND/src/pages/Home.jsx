@@ -6,7 +6,7 @@ import MessageForm from "../components/MessageForm";
 const Home = () => {
     return (
         <>
-        <Hero title={"Welcome to ZeeCare Medical Institute | Your Trusted Healthcare provider"} imageUrl={"/public/hero.png"} />
+        <Hero title={"Welcome to ZeeCare Medical Institute | Your Trusted Healthcare provider"} imageUrl={"/hero.png"} />
         <Biography imageUrl={"/public/about.png"}/>
         <Departments/>
         <MessageForm/>
