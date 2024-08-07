@@ -25,7 +25,7 @@ const Message = () => {
     }
 
     return (
-        <section className="page-messages">
+        <section className="page messages">
             <h1>MESSAGES</h1>
             <div className="banner">
                 {
